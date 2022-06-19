@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=40&color=000&center=true&vCenter=true&width=1000&lines=💻+JAVASCRIPT+💻;EXERCÍCIOS+PARA+PRATICAR)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=40&color=00255&center=true&vCenter=true&width=1000&lines=💻+JAVASCRIPT+💻;EXERCÍCIOS+PARA+PRATICAR)](https://git.io/typing-svg)
 
 <br>
 
