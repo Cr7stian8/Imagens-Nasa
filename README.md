@@ -14,7 +14,7 @@
 Uma IDE é um Ambiente de desenvolvimento. <br>
 Visual Studio Code é uma IDE usada para programar na maioria das liinguagens, sendo necessária apenas a instalação de extensões.<br><br>
 ### Sobre os arquivos:
---> Arquivos .js carregam com eles a parte lógica e é escrito em Javascript<br>
+--> Arquivos .js carregam toda a lógica do site<br>
 --> Arquivos .css são responsáveis pela estilização da página<br>
---> Arquivos .html faz a integração das duas partes e é responsável pelo que será exibido entre outras coisas<br>
+--> Arquivos .html são responsável por marcar o site<br>
 
