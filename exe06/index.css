@@ -1,0 +1,20 @@
+#container-numeros{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+#container-principal{
+    margin-top: 200px;
+}
+
+.botao{
+    width: 50px;
+}
+
+#vh100{
+    height: 100vh;
+}
+
+.center{
+    text-align: center;
+}
