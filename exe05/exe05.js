@@ -24,7 +24,6 @@ function recebe2(){
     }else{
         alert("O valor digitado não é um número");
     }
-
 }
 
 //Somando os dois valores
@@ -38,7 +37,7 @@ function somar(){
     var soma = numero1+numero2;
 
     // Verificando se o valor digitado é um número ou string
-    if(isNaN(soma) == true){
+    if(isNaN(soma)){
         //O que fazer caso seja uma String
         document.write("O valor da soma é: "+soma+"<br><br>");
         document.write("Se o valor da soma for 'NaN' "+" Você não digitou um número <br>");
