@@ -1,31 +1,89 @@
-function recebe(){
-    // let vetor = [];
-    // zero=0;
-    // vetor[0] = zero;
-    
+//DECLARANDO VARIAVEIS
+let vetor = [], numElementos = 0, resultado;
 
-    for(i=0; i < 10; i++){
-        vetor[i]=parseInt(document.getElementById(vetor[i]).value);
-        alert(vetor[i])
+function recebe(numero) {
+    if (numElementos >= 3) {
+        esvaziaVetor();
+        limparInput();
+        numElementos = 0;
+    }
+    document.getElementById('result').value += numero;
+}
+
+// ======================= OPERADORES ======================== //
+
+function adicionaOperador(operador) {
+    if (vetor.length == 3) {
+        esvaziaVetor();
+        limparInput();
+        numElementos = 0;
+        vetor.push(resultado)
+        vetor.push(operador);
+    }
+    else {
+        recebeInput();
+        vetor.push(operador);
+        limparInput();
+    }
+}
+
+function igual() {
+    recebeInput();
+    limparInput();
+    switch (vetor[1]) {
+        case "+":
+            resultado = contas.soma(vetor[0], vetor[2]);
+            defineResultado();
+            break
+        case "-":
+            resultado = contas.subtracao(vetor[0], vetor[2]);
+            defineResultado();
+            break
+        case "x":
+            resultado = contas.multiplicacao(vetor[0], vetor[2]);
+            defineResultado();
+            break
+        default:
+            resultado = contas.divisao(vetor[0], vetor[2]);
+            defineResultado();
     }
 
-    // um = document.getElementById("1");
-    // dois = document.getElementById("2");
-    // tres = document.getElementById("3");
-    // quatro = document.getElementById("4");
-    // cinco = document.getElementById("5");
-    // seis = document.getElementById("6");
-    // sete = document.getElementById("7");
-    // oito = document.getElementById("8");
-    // nove = document.getElementById("9");
+    numElementos = numElementos + 3;
+}
+
+// ===================== OBJETO QUE ARMAZENA CONTAS ============== //
+
+const contas = {
+    soma(numero1, numero2) {
+        return numero1 + numero2;
+    },
+    subtracao(numero1, numero2) {
+        return numero1 - numero2;
+    },
+    multiplicacao(numero1, numero2) {
+        return numero1 * numero2;
+    },
+    divisao(numero1, numero2) {
+        return numero1 / numero2;
+    }
 }
 
 
-function soma(){
-    resultadoSoma=0;
-    for(i=0; i < vetor.lenght; i++){
-        resultadoSoma = resultadoSoma + vetor[i];
+//======================= fUNÇÕES FATORADAS ===================== //
+function alertaVetor() {
+    alert(vetor)
+}
+function esvaziaVetor(){
+    for (i = vetor.length; i > 0; i--) {
+        vetor.pop();
     }
 }
-
-document.getElementById("demo").innerHTML = vetor[0];
+function limparInput() {
+    document.getElementById('result').value = "";
+}
+function recebeInput() {
+    vetor.push(parseFloat(document.getElementById('result').value));
+}
+function defineResultado() {
+    document.getElementById('result').value = resultado;
+}
