@@ -9,59 +9,61 @@
 </head>
 
 <body>
-    <div>
-        <div id="container-principal">
 
-            <section class="center input">
-                <input id="result"></input>
-            </section>
-            
-            <div id="container-numeros">
-                <div class="fileira">
-                    <!-- primeira fileira -->
-                    <input type="button" value="." class="botao" onclick="recebe('.')">
-                    <input type="button" value="0" class="botao" id="zero" onclick="recebe(0)">
-                    <input type="button" value="=" class="botao" onclick="igual()">
-                    <input type="button" value="+" class="botao" onclick="adicionaOperador('+')">
-                </div>
-
-                <div class="fileira">
-                    <!-- Segunda fileira -->
-                    <input type="button" value="1" id="1" class="botao" onclick="recebe(1)">
-                    <input type="button" value="2" id="2" class="botao" onclick="recebe(2)">
-                    <input type="button" value="3" id="3" class="botao" onclick="recebe(3)">
-                    <input type="button" value="-" class="botao" onclick="adicionaOperador('-')">
-                </div>
-
-                <div class="fileira">
-                    <!-- terceira fileira -->
-                    <input type="button" value="4" id="4" class="botao" onclick="recebe(4)">
-                    <input type="button" value="5" id="5" class="botao" onclick="recebe(5)">
-                    <input type="button" value="6" id="6" class="botao" onclick="recebe(6)">
-                    <input type="button" value="x" class="botao" onclick="adicionaOperador('x')">
-                </div>
-
-                <div class="fileira">
-                    <!-- Quarta fileira -->
-                    <input type="button" value="7" id="7" class="botao" onclick="recebe(7)">
-                    <input type="button" value="8" id="8" class="botao" onclick="recebe(8)">
-                    <input type="button" value="9" id="9" class="botao" onclick="recebe(9)">
-                    <input type="button" value="/" class="botao" onclick="adicionaOperador('/')">
-                </div>
-            </div>
-        </div>
-        <div>
+    <div id="container-principal">
+        <section class="center">
             <h3>valores: </h3>
             <div id="vetor"> </div>
-        </div>
+        </section>
 
-        <button onclick="alertaVetor()">
-            exibir vetor
-        </button>
-        <button onclick="limparInput()">
-            Limpar display
-        </button>
+        <section class="center input">
+            <input id="result"></input>
+        </section>
+
+        <section id="container-numeros">
+            <div>
+                <button onclick="alertaVetor()" class="botaoLargo">
+                    vetor
+                </button>
+
+                <button onclick="limparInput()" class='botaoLargo'>
+                    Limpar
+                </button>
+            </div>
+            <div class="fileira">
+                <!-- primeira fileira -->
+                <input type="button" value="." class="botao" onclick="recebe('.')">
+                <input type="button" value="0" class="botao" id="zero" onclick="recebe(0)">
+                <input type="button" value="=" class="botao" onclick="igual()">
+                <input type="button" value="+" class="botao" onclick="adicionaOperador('+')">
+            </div>
+
+            <div class="fileira">
+                <!-- Segunda fileira -->
+                <input type="button" value="1" id="1" class="botao" onclick="recebe(1)">
+                <input type="button" value="2" id="2" class="botao" onclick="recebe(2)">
+                <input type="button" value="3" id="3" class="botao" onclick="recebe(3)">
+                <input type="button" value="-" class="botao" onclick="adicionaOperador('-')">
+            </div>
+
+            <div class="fileira">
+                <!-- terceira fileira -->
+                <input type="button" value="4" id="4" class="botao" onclick="recebe(4)">
+                <input type="button" value="5" id="5" class="botao" onclick="recebe(5)">
+                <input type="button" value="6" id="6" class="botao" onclick="recebe(6)">
+                <input type="button" value="x" class="botao" onclick="adicionaOperador('x')">
+            </div>
+
+            <div class="fileira">
+                <!-- Quarta fileira -->
+                <input type="button" value="7" id="7" class="botao" onclick="recebe(7)">
+                <input type="button" value="8" id="8" class="botao" onclick="recebe(8)">
+                <input type="button" value="9" id="9" class="botao" onclick="recebe(9)">
+                <input type="button" value="/" class="botao" onclick="adicionaOperador('/')">
+            </div>
+        </section>
     </div>
+
 
     <script src="exe06.js"></script>
 </body>
