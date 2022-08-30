@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <!-- EXEMPLO DE GET -->
+<!-- EXEMPLO DE GET -->
+
 <head>
     <title>Exemplo de requisição HTTP GET com javascript puro</title>
 </head>
+
 <body>
 
     <input type="text" id="url" style="width:300px;" value="https://dicasdejavascript.com.br/exemplo.txt">
-    <button onclick="fazerRequisicao();">Fazer requisição</button>
+    <button onclick="get();">Fazer requisição</button>
     <hr />
     <div id="resposta"></div>
 
     <script>
-        function fazerRequisicao(){
+        function get() {
 
             var url = document.getElementById('url').value;
 
@@ -25,4 +27,5 @@
         }
     </script>
 </body>
+
 </html>
