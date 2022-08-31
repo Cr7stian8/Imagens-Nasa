@@ -1,5 +1,4 @@
 function get(url){
-    // Instanciando Objeto responsável por fazer request
     let request = new XMLHttpRequest()
     request.open("GET", url, false)
     request.send()
@@ -7,12 +6,33 @@ function get(url){
 }
 
 function criaLinha(usuario){
-    document.write(get("https://cdmspring.herokuapp.com/produto/buscar"))
+    linha = document.createElement("tr");
+    tdId = document.createElement("td");
+    tdNome = document.createElement("td");
+
+
+    tdId.innerHTML = usuario.idProduto;
+    tdNome.innerHTML = usuario.nomeProduto;
+
+    linha.appendChild(tdId);
+    linha.appendChild(tdNome);
+
+    return linha
 }
 
 function principal(){
-    // Realizando um get na API da Botanic House e exibindo no console
-    console.log(get("https://cdmspring.herokuapp.com/produto/buscar"))
+    let urlAPI = "https://cdmspring.herokuapp.com/produto/buscar";
+    dados = get(urlAPI);
+    
+    usuarios = JSON.parse(dados);
+
+    let tabela = document.getElementById("tabela");
+
+    usuarios.forEach(element => {
+        let linha = criaLinha(element);
+        tabela.appendChild(linha);
+    });
+
 }
 
-criaLinha()
+principal();
