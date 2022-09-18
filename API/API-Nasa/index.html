@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <!-- 
 =============================================================
 Consumindo Api da Nasa
@@ -8,19 +8,22 @@ Consumindo Api da Nasa
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api da nasa</title>
+    <title>Api da Nasa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Api da Nasa</h1>
-    <!-- Receber mes ano e dia -->
-    <section class="flex">
-        <input id="dia" type="text" placeholder="Dia">
-        <input id="mes" type="text" placeholder="Mes">
-        <input id="ano" type="text" placeholder="Ano">
-        <input type="submit" value="Enviar" onclick="principal()">
-        <button onclick="teste()" id="apagar">apagar</button>
-    </section>
+    <header>
+        <h1 id="title">Api da Nasa</h1>
+        <!-- Receber mes ano e dia -->
+        <h2 class="instruct"> Pressione o botão direito e traduza a página para ler a informação</h2>
+        <section class="flex">
+            <input id="dia" type="text" placeholder="Dia">
+            <input id="mes" type="text" placeholder="Mes">
+            <input id="ano" type="text" placeholder="Ano">
+            <input type="submit" value="Enviar" onclick="principal()">
+            <button onclick="teste()" id="apagar">apagar</button>
+        </section>
+    </header>
     <section class="flex resultado">
         <article id="imagem" alt=""></article>
         <article id="conteudo"></article>
