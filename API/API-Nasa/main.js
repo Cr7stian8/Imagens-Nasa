@@ -31,10 +31,19 @@ function get(url) {
 
 // tentando deixar só o ultimo get na tela
 // Stutus = incompleto
-function teste(){
-    document.getElementById("div").remove();
-    let novaDiv = document.createElement("div");
-    novaDiv.id("div");
+function LimpaTudo(){
+    LimpaImagem();
+    LimpaConteudo();
+}
+function LimpaImagem(){
+    // Precisa remover elemento por elemento
+    var imagem = document.getElementById("imagem");
+    imagem.parentNode.removeChild(imagem);
+}
+function LimpaConteudo(){
+    // Precisa remover elemento por elemento
+    var conteudo = document.getElementById("conteudo");
+    conteudo.parentNode.removeChild(conteudo);
 }
 // FUNÇÕES FATORADAS
 function AdicionaData(){
@@ -55,6 +64,7 @@ function AdicionaTitulo(){
 function AdicionaDescricao(){
     var descricao = document.createElement("p");
     descricao.innerHTML = dadosJson.explanation;
-    descricao.classList.add("descricao");
     document.getElementById("conteudo").appendChild(descricao);
+
+    descricao.classList.add("descricao");
 }
