@@ -14,15 +14,17 @@ Consumindo Api da Nasa
 <body>
     <h1>Api da Nasa</h1>
     <!-- Receber mes ano e dia -->
-    <div class="flex">
+    <section class="flex">
         <input id="dia" type="text" placeholder="Dia">
         <input id="mes" type="text" placeholder="Mes">
         <input id="ano" type="text" placeholder="Ano">
         <input type="submit" value="Enviar" onclick="principal()">
         <button onclick="teste()" id="apagar">apagar</button>
-    </div>
-    
-    <div id="div" alt=""></div>
+    </section>
+    <section class="flex resultado">
+        <article id="imagem" alt=""></article>
+        <article id="conteudo"></article>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>

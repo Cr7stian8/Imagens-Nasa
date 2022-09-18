@@ -7,6 +7,7 @@ function principal() {
     var mes = document.getElementById("mes").value;
     var ano = document.getElementById("ano").value;
 
+    //Adicionando data a url para realizar o get na data especificado pelo usuario
     var data ="&date="+ano+"-"+mes+"-"+dia;
     let urlAPI = url + data;
 
@@ -15,36 +16,45 @@ function principal() {
     dadosJson = JSON.parse(dados);
 
     AdicionaTitulo()
+    AdicionaDescricao()
     AdicionaImagem()
     AdicionaData()
 }
-function teste(){
-    // ESSE TESTE CONSISTE EM TENTAR DEIXAR SÓ O ULTIMO GET NA TELA
-    document.getElementById("div").remove();
-    let novaDiv = document.createElement("div");
-    novaDiv.id("div");
-}
 
-// MÉTODOS HTTP
+// MÉTODO HTTP
 function get(url) {
     let request = new XMLHttpRequest();
     request.open("GET", url, false);
     request.send();
     return request.responseText;
 }
+
+// tentando deixar só o ultimo get na tela
+// Stutus = incompleto
+function teste(){
+    document.getElementById("div").remove();
+    let novaDiv = document.createElement("div");
+    novaDiv.id("div");
+}
 // FUNÇÕES FATORADAS
 function AdicionaData(){
-    var data = document.createElement("p")
+    var data = document.createElement("p");
     data.innerHTML = dadosJson.date;
-    document.getElementById("div").appendChild(data)
+    document.getElementById("conteudo").appendChild(data);
 }
 function AdicionaImagem(){
     var imagem = document.createElement("img");
     imagem.src = dadosJson.hdurl;
-    document.getElementById("div").appendChild(imagem);
+    document.getElementById("imagem").appendChild(imagem);
 }
 function AdicionaTitulo(){
     var titulo = document.createElement("h2");
     titulo.innerHTML = dadosJson.title;
-    document.getElementById("div").appendChild(titulo);
+    document.getElementById("conteudo").appendChild(titulo);
+}
+function AdicionaDescricao(){
+    var descricao = document.createElement("p");
+    descricao.innerHTML = dadosJson.explanation;
+    descricao.classList.add("descricao");
+    document.getElementById("conteudo").appendChild(descricao);
 }
