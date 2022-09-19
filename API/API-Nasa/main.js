@@ -38,12 +38,14 @@ function LimpaTudo(){
 function LimpaImagem(){
     // Precisa remover elemento por elemento
     var imagem = document.getElementById("imagem");
-    imagem.parentNode.removeChild(imagem);
+    // imagem.parentNode.removeChild(imagem);
+    imagem.empty();
 }
 function LimpaConteudo(){
     // Precisa remover elemento por elemento
     var conteudo = document.getElementById("conteudo");
-    conteudo.parentNode.removeChild(conteudo);
+    // conteudo.parentNode.removeChild(conteudo);
+    conteudo.empty();
 }
 // FUNÇÕES FATORADAS
 function AdicionaData(){
