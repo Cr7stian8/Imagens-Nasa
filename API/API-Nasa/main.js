@@ -15,6 +15,7 @@ function principal() {
     dados = get(urlAPI);
     dadosJson = JSON.parse(dados);
 
+    cria()
     AdicionaTitulo()
     AdicionaDescricao()
     AdicionaImagem()
@@ -28,26 +29,31 @@ function get(url) {
     request.send();
     return request.responseText;
 }
+// ============== Explicar essas funções =============
 
-// tentando deixar só o ultimo get na tela
-// Stutus = incompleto
 function LimpaTudo(){
     LimpaImagem();
     LimpaConteudo();
 }
+function cria(){
+    var imagem = document.createElement("article");
+    imagem.setAttribute("id","imagem")
+    document.getElementsByClassName("resultado")[0].appendChild(imagem);
+
+    var conteudo = document.createElement("article");
+    conteudo.setAttribute("id","conteudo")
+    document.getElementsByClassName("resultado")[0].appendChild(conteudo);
+}
+
+// =================== FUNÇÕES FATORADAS =============
 function LimpaImagem(){
-    // Precisa remover elemento por elemento
     var imagem = document.getElementById("imagem");
-    // imagem.parentNode.removeChild(imagem);
-    imagem.empty();
+    imagem.parentNode.removeChild(imagem);
 }
 function LimpaConteudo(){
-    // Precisa remover elemento por elemento
     var conteudo = document.getElementById("conteudo");
-    // conteudo.parentNode.removeChild(conteudo);
-    conteudo.empty();
+    conteudo.parentNode.removeChild(conteudo);
 }
-// FUNÇÕES FATORADAS
 function AdicionaData(){
     var data = document.createElement("p");
     data.innerHTML = dadosJson.date;
