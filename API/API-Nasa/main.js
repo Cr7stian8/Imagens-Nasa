@@ -32,9 +32,12 @@ function get(url) {
 // ============== Explicar essas funções =============
 
 function LimpaTudo(){
-    LimpaImagem();
-    LimpaConteudo();
+    for (var index = 0; index < 8; index++) {
+        LimpaImagem();
+        LimpaConteudo();
+    }
 }
+
 function cria(){
     var imagem = document.createElement("article");
     imagem.setAttribute("id","imagem")
@@ -49,10 +52,12 @@ function cria(){
 function LimpaImagem(){
     var imagem = document.getElementById("imagem");
     imagem.parentNode.removeChild(imagem);
+    
 }
 function LimpaConteudo(){
     var conteudo = document.getElementById("conteudo");
     conteudo.parentNode.removeChild(conteudo);
+    
 }
 function AdicionaData(){
     var data = document.createElement("p");
