@@ -1,18 +1,18 @@
 /* Estilizações diretamente nas tags */
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     margin: 0 !important;
-}
-button, input{
-    padding: 10px;
-}
-h1{
-    margin-block-end: 0 !important;
-    margin-block-start: 0 !important;
 }
 header{
     background-color: rgb(0, 0, 74);
     padding-bottom: 30px;
+}
+header h1, header h2, header p{
+    color: white;
+}
+h1{
+    margin-block-end: 0 !important;
+    margin-block-start: 0 !important;
 }
 h1, h2, p{
     text-align: center;
@@ -21,8 +21,9 @@ h1, h2, p{
 p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-header h1, header h2, header p{
-    color: white;
+button, input{
+    padding: 10px;
+    margin: 5px;
 }
 img{
     padding-bottom: 5vh;
@@ -32,24 +33,35 @@ img{
     padding-right: 5vw;
 }
 /* Estilizando coisas nos ID's */
-.instruct{
-    font-size: 20px;
+#apagar{
+    color: white;
+    background-color: #ad0909f3;
+    cursor: pointer;
     font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
+}
+#enviar{
+    font-weight: 700;
+    cursor: pointer;
 }
 #title{
-    padding-top: 25px;
+    padding-top: 10px;
 }
 #conteudo{
     width: 35vw;
     padding-right: 5vw;
+}
+/* CLASSES */
+.instruct{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
 }
 .flex{
     display: flex;
     justify-content: center;
 }
 .resultado{
-    padding-top: 5vh;
+    padding-top: 4vh;
 }
 .descricao{
     font-size: 18px;

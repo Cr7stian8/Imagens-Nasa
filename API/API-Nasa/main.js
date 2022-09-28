@@ -7,7 +7,7 @@ function principal() {
     var mes = document.getElementById("mes").value;
     var ano = document.getElementById("ano").value;
 
-    //Adicionando data a url para realizar o get na data especificado pelo usuario
+    //Adicionando data a url para realizar o get na data especificada pelo usuario
     var data ="&date="+ano+"-"+mes+"-"+dia;
     let urlAPI = url + data;
 
@@ -29,7 +29,7 @@ function get(url) {
     request.send();
     return request.responseText;
 }
-// ============== Explicar essas funções =============
+// ============== Explicar essas funções ============= //
 
 function LimpaTudo(){
     LimpaImagem();
@@ -45,7 +45,7 @@ function cria(){
     document.getElementsByClassName("resultado")[0].appendChild(conteudo);
 }
 
-// =================== FUNÇÕES FATORADAS =============
+// =================== FUNÇÕES FATORADAS ============= //
 function LimpaImagem(){
     var imagem = document.getElementById("imagem");
     imagem.parentNode.removeChild(imagem);
