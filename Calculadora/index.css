@@ -16,15 +16,17 @@
 
 #result{
     margin: 10px;
-    width: 245px;
-    background-color: #808080;
+    width: 230px;
+    background-color: #ffffff;
     font-size: 24px;
     font-family: --font;
+    padding: 10px;
 }
 
 /* ================== CLASSES =================== */
 .botao{
-    background-color: #808080;
+    color: white;
+    background-color: #412eaf;
     width: 60px;
     height: 60px;
     font-size: 24px;
@@ -32,7 +34,8 @@
 }
 
 .botaoLargo{
-    background-color: #808080;
+    color: white;
+    background-color: #412eaf;
     width: 124px;
     font-size: 24px;
     font-family: --font;

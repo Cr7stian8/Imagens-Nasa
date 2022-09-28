@@ -1,7 +1,6 @@
-let seg = 0;
-
-function botaoIniciar() {
-    while (seg <= 4) {
-            document.getElementById('segundos').innerHTML = data;
-            setTimeout
-}}
+var segundosRodando = 0;
+function main() {
+    segundosRodando += 1;
+    let segundos = document.getElementById("segundos");
+    segundos.innerHTML = segundosRodando;
+}
