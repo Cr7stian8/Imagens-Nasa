@@ -52,12 +52,10 @@ function cria(){
 function LimpaImagem(){
     var imagem = document.getElementById("imagem");
     imagem.parentNode.removeChild(imagem);
-    
 }
 function LimpaConteudo(){
     var conteudo = document.getElementById("conteudo");
     conteudo.parentNode.removeChild(conteudo);
-    
 }
 function AdicionaData(){
     var data = document.createElement("p");
