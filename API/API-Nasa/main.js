@@ -16,7 +16,6 @@ function principal() {
     dados = get(urlAPI);
     dadosJson = JSON.parse(dados);
 
-    LimpaTudo()
     cria()
     AdicionaTitulo()
     AdicionaDescricao()
