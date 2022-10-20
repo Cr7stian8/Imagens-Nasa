@@ -1,3 +1,4 @@
+var teste = 0;
 function principal() {
     //Api que está sendo consumida
     var url = "https://api.nasa.gov/planetary/apod?api_key=XNDfJe9BMgcT1s0MXNp3RC4kworzZekn9ORy9hYu";
@@ -15,6 +16,7 @@ function principal() {
     dados = get(urlAPI);
     dadosJson = JSON.parse(dados);
 
+    LimpaTudo()
     cria()
     AdicionaTitulo()
     AdicionaDescricao()
@@ -30,12 +32,11 @@ function get(url) {
     return request.responseText;
 }
 // ============== Explicar essas funções ============= //
-
 function LimpaTudo(){
-    for (var index = 0; index < 8; index++) {
-        LimpaImagem();
-        LimpaConteudo();
-    }
+        for (var index = 0; index < 8; index++) {
+            LimpaImagem();
+            LimpaConteudo();
+        }
 }
 
 function cria(){
@@ -46,6 +47,7 @@ function cria(){
     var conteudo = document.createElement("article");
     conteudo.setAttribute("id","conteudo")
     document.getElementsByClassName("resultado")[0].appendChild(conteudo);
+    teste = 1;
 }
 
 // =================== FUNÇÕES FATORADAS ============= //
