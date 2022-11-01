@@ -23,8 +23,6 @@ function recebe(){
     numero1 = document.getElementById("textoDigitado").value;
     //Verificando se o valor digitado é um número
     if(isNaN(numero1) == false ){
-        alert("Primeiro valor adicionado");
-    }else{
         alert("O valor digitado não é um número");
     }
 }
@@ -33,8 +31,6 @@ function recebe2(){
     numero2 = document.getElementById("textoDigitado2").value;
     //Verificando se o valor digitado é um número
     if(isNaN(numero2) == false ){
-        alert("Segundo valor adicionado");
-    }else{
         alert("O valor digitado não é um número");
     }
 }
