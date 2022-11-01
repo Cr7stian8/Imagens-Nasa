@@ -5,26 +5,36 @@
 Consumindo Api da Nasa
 =============================================================
 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api da Nasa</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1 id="title">Api da Nasa</h1>
-        <!-- Receber mes ano e dia -->
-        <h2 class="instruct"> Pressione o botão direito e traduza a página para ler a informação ps: Pesquise uma imagem e apague se não a pagina quebra. (Um dia eu arrumo, tmj!)</h2>
-        <section class="flex">
-            <input id="dia" type="text" placeholder="Dia">
-            <input id="mes" type="text" placeholder="Mes">
-            <input id="ano" type="text" placeholder="Ano">
-            <input id="enviar" type="submit" value="Enviar" onclick="principal()">
-            <button onclick="LimpaTudo()" id="apagar">apagar</button>
-        </section>
-    </header>
-    <section class="flex resultado"></section>
+    <div id="imagemFundo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
+            width="180px">
+        <img class="pl50" src="images/textoHeader.png" width="600px">
+    </div>
+    <section id="fundoXiado">
+        <div id="pesquise">
+            <p>Pesquise sua data: </p>
+        </div>
+        <input id="dia" type="text" placeholder="Dia">
+        <input id="mes" type="text" placeholder="Mes">
+        <input id="ano" type="text" placeholder="Ano">
+        <input id="enviar" type="submit" value="Enviar" onclick="principal()">
+        <button onclick="LimpaTudo()" id="apagar">apagar</button>
+        <section class="flex resultado"></section>
+    </section>
+
+
+
+
     <script src="main.js"></script>
 </body>
+
 </html>

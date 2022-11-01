@@ -1,4 +1,3 @@
-var teste = 0;
 function principal() {
     //Api que está sendo consumida
     var url = "https://api.nasa.gov/planetary/apod?api_key=XNDfJe9BMgcT1s0MXNp3RC4kworzZekn9ORy9hYu";
@@ -30,9 +29,9 @@ function get(url) {
     request.send();
     return request.responseText;
 }
-// ============== Explicar essas funções ============= //
+// ============== FUNÇÕES AUTOEXPLICATIVAS ============= //
 function LimpaTudo(){
-        for (var index = 0; index < 8; index++) {
+        for (var index = 0; index < 3; index++) {
             LimpaImagem();
             LimpaConteudo();
         }
@@ -48,7 +47,6 @@ function cria(){
     document.getElementsByClassName("resultado")[0].appendChild(conteudo);
     teste = 1;
 }
-
 // =================== FUNÇÕES FATORADAS ============= //
 function LimpaImagem(){
     var imagem = document.getElementById("imagem");
@@ -58,25 +56,30 @@ function LimpaConteudo(){
     var conteudo = document.getElementById("conteudo");
     conteudo.parentNode.removeChild(conteudo);
 }
+
 function AdicionaData(){
     var data = document.createElement("p");
+    data.style.color = "white"
     data.innerHTML = dadosJson.date;
     document.getElementById("conteudo").appendChild(data);
 }
 function AdicionaImagem(){
     var imagem = document.createElement("img");
+    imagem.style.width = "40vw"
+    imagem.style.paddingRight = "5vw"
     imagem.src = dadosJson.hdurl;
     document.getElementById("imagem").appendChild(imagem);
 }
 function AdicionaTitulo(){
     var titulo = document.createElement("h2");
+    titulo.style.color = "white"
     titulo.innerHTML = dadosJson.title;
     document.getElementById("conteudo").appendChild(titulo);
 }
 function AdicionaDescricao(){
     var descricao = document.createElement("p");
+    descricao.style.color = "white"
     descricao.innerHTML = dadosJson.explanation;
     document.getElementById("conteudo").appendChild(descricao);
-
     descricao.classList.add("descricao");
 }
