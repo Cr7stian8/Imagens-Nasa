@@ -4,8 +4,8 @@ function main(){
     let urlApi = url + nomeBuscado;
 
     let dados = get(urlApi);
-    dadosJson = JSON.parse(dados);
-    document.getElementById("resultado").innerHTML(dadosJson);
+    let resultado = document.getElementById("resultado");
+    console.log(dados);
 }
 // get
 function get(urlGet){
