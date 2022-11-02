@@ -14,21 +14,35 @@ Consumindo Api da Nasa
 </head>
 
 <body>
+    <!-- primeira sessão -->
     <div id="imagemFundo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
             width="180px">
         <img class="pl50" src="images/textoHeader.png" width="600px">
     </div>
-    <section id="fundoXiado">
+    <section>
+        <!-- segunda sessão -->
         <div id="pesquise">
             <p>Pesquise sua data: </p>
         </div>
-        <input id="dia" type="text" placeholder="Dia">
-        <input id="mes" type="text" placeholder="Mes">
-        <input id="ano" type="text" placeholder="Ano">
-        <img src="images/lupa.png" onclick="principal()" width="45px">
-        <img onclick="LimpaTudo()" src="images/lixo.png" width="45px">
+        <div class="flex">
+            <input id="dia" type="text" placeholder="Dia">
+            <input id="mes" type="text" placeholder="Mes">
+            <input id="ano" type="text" placeholder="Ano">
+            <img class="pr10 hoverIcone" src="images/lupa.png" onclick="principal()" width="45px">
+            <img class="hoverIcone" onclick="LimpaTudo()" src="images/lixo.png" width="45px">
+        </div>
+
         <section class="flex resultado"></section>
+
+        <!-- ultima sessão -->
+        <div id="ultimas-pesquisas">
+            <p>ultimas pesquisas</p>
+        </div>
+        <section>
+            <div id="imagem1"></div>
+        </section>
+        <!-- footer -->
     </section>
 
 

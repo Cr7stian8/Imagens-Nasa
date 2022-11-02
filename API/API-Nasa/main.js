@@ -15,6 +15,14 @@ function principal() {
     dados = get(urlAPI);
     dadosJson = JSON.parse(dados);
 
+    let element = document.getElementById("imagem");
+    if (element == null){
+        conteudo()
+    }else{
+        LimpaTudo()
+    }
+}
+function conteudo(){
     cria()
     AdicionaTitulo()
     AdicionaDescricao()
@@ -30,13 +38,6 @@ function get(url) {
     return request.responseText;
 }
 // ============== FUNÇÕES AUTOEXPLICATIVAS ============= //
-function LimpaTudo(){
-        for (var index = 0; index < 3; index++) {
-            LimpaImagem();
-            LimpaConteudo();
-        }
-}
-
 function cria(){
     var imagem = document.createElement("article");
     imagem.setAttribute("id","imagem")
@@ -45,9 +46,14 @@ function cria(){
     var conteudo = document.createElement("article");
     conteudo.setAttribute("id","conteudo")
     document.getElementsByClassName("resultado")[0].appendChild(conteudo);
-    teste = 1;
 }
 // =================== FUNÇÕES FATORADAS ============= //
+function LimpaTudo(){
+    for (var index = 0; index < 3; index++) {
+        LimpaImagem();
+        LimpaConteudo();
+    }
+}
 function LimpaImagem(){
     var imagem = document.getElementById("imagem");
     imagem.parentNode.removeChild(imagem);

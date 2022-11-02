@@ -1,5 +1,14 @@
 /* Estilizações diretamente nas tags */
+img{
+    vertical-align: middle;
+    align-items: center;
+}
 body{
+    align-items: center;
+    background-image: url(images/fundoXiado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     background-color: #fff;
     margin: 0 !important;
     animation-name: slidein;
@@ -24,35 +33,22 @@ p{
     padding: 13px;
     border-radius: 10px;
 }
-#pesquise{
-    padding-top: 40px;
-    padding-bottom: 20px;
-    font-size: 26px;
-    font-family: "Arial";
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-#fundoXiado{
-    align-items: center;
-    background-image: url(images/fundoXiado.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 80vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
 #imagemFundo{
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-image: url(images/ImgFundo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 80vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
 }
 #imagemFundo img{
     vertical-align: middle;
+}
+/* classes */
+.hoverIcone:hover{
+    transition: 0.1s;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 4px gray;
 }
 .pl50{
     padding-left: 50px;
@@ -63,4 +59,40 @@ p{
 }
 .resultado{
     padding-top: 4vh;
+}
+.pb30{
+    padding-bottom: 30px;
+}
+.pr10{
+    margin-right: 10px;
+}
+/* Testo */
+#pesquise{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 26px;
+    font-family: "Arial";
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#ultimas-pesquisas{
+    text-align: center;
+    font-size: 28px;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* jscript */
+#imagem{
+    width: 40vw;
+    padding-left: 5vw;
+    padding-right: 3vw;   
+}
+#conteudo{
+    width: 40vw;
+    padding-left: 3vw;
+    padding-right: 5vw;
 }
