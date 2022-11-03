@@ -62,7 +62,6 @@ function LimpaConteudo(){
     var conteudo = document.getElementById("conteudo");
     conteudo.parentNode.removeChild(conteudo);
 }
-
 function AdicionaData(){
     var data = document.createElement("p");
     data.style.color = "white"
@@ -73,6 +72,7 @@ function AdicionaImagem(){
     var imagem = document.createElement("img");
     imagem.style.width = "40vw"
     imagem.style.paddingRight = "5vw"
+    imagem.style.paddingLeft = "5vw"
     imagem.src = dadosJson.hdurl;
     document.getElementById("imagem").appendChild(imagem);
 }
@@ -85,6 +85,7 @@ function AdicionaTitulo(){
 function AdicionaDescricao(){
     var descricao = document.createElement("p");
     descricao.style.color = "white"
+    descricao.style.paddingRight= "5vw"
     descricao.innerHTML = dadosJson.explanation;
     document.getElementById("conteudo").appendChild(descricao);
     descricao.classList.add("descricao");

@@ -1,13 +1,15 @@
 /* Estilizações diretamente nas tags */
-img{
+img {
     vertical-align: middle;
     align-items: center;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-footer{
+
+footer {
     background-color: #fff;
     padding-top: 20px;
     padding-right: 20px;
@@ -17,7 +19,8 @@ footer{
     border-radius: 20px 20px 0 0;
     margin: auto auto;
 }
-body{
+
+body {
     align-items: center;
     background-image: url(images/fundoXiado.png);
     background-repeat: no-repeat;
@@ -27,26 +30,34 @@ body{
     animation-name: slidein;
     animation-duration: 2s;
 }
+
 @keyframes slidein {
     from {
-      margin-left: 100%;
-      width: 300%
+        margin-left: 100%;
+        width: 300%
     }
+
     to {
-      margin-left: 0%;
-      width: 100%;
+        margin-left: 0%;
+        width: 100%;
     }
 }
-p{
+
+p {
     margin-block-end: 0px !important;
     margin-block-start: 0px !important;
 }
-#dia, #mes, #ano{
+
+/* ID'S */
+#dia,
+#mes,
+#ano {
     margin-right: 10px;
     padding: 13px;
     border-radius: 10px;
 }
-#imagemFundo{
+
+#imagemFundo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,36 +65,45 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
 }
-#imagemFundo img{
+
+#imagemFundo img {
     vertical-align: middle;
 }
-#vh95{
+
+#vh95 {
     min-height: 95vh;
 }
+
 /* classes */
-.hoverIcone:hover{
+.hoverIcone:hover {
     transition: 0.1s;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 4px gray;
 }
-.pl50{
+
+.pl50 {
     padding-left: 50px;
 }
-.flex{
+
+.flex {
     display: flex;
     justify-content: center;
 }
-.resultado{
+
+.resultado {
     padding-top: 4vh;
 }
-.pb30{
+
+.pb30 {
     padding-bottom: 30px;
 }
-.pr10{
+
+.pr10 {
     margin-right: 10px;
 }
-/* Testo */
-#pesquise{
+
+/* texto */
+#pesquise {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -93,7 +113,8 @@ p{
     font-weight: bold;
     text-transform: uppercase;
 }
-#ultimas-pesquisas{
+
+#ultimas-pesquisas {
     text-align: center;
     font-size: 28px;
     font-family: "Arial";
@@ -101,14 +122,56 @@ p{
     font-weight: bold;
     text-transform: uppercase;
 }
-/* jscript */
-#imagem{
-    width: 40vw;
-    padding-left: 5vw;
-    padding-right: 3vw;   
-}
-#conteudo{
-    width: 40vw;
-    padding-left: 3vw;
-    padding-right: 5vw;
+
+/* mobile */
+@media only screen and (max-width:600px) {
+    #imagemFundo{
+        display: flex;
+        flex-direction: column;
+    }
+    header img:nth-child(1){
+        width: 80px;
+        padding-bottom: 10px;
+    }
+    header img:nth-child(2){
+        width: 100px;
+    }
+    /* ID'S */
+    #dia,
+    #mes,
+    #ano {
+        margin-right: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    input{
+        width: 50px;
+    }
+    /* classes */
+    .pl50 {
+        padding-left: 0;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+    /* texto */
+    #pesquise {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 14px;
+        font-family: "Arial";
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #ultimas-pesquisas {
+        text-align: center;
+        font-size: 16px;
+        font-family: "Arial";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
