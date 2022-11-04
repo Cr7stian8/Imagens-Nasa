@@ -115,6 +115,7 @@ p {
 }
 
 #ultimas-pesquisas {
+    padding-top: 50px;
     text-align: center;
     font-size: 28px;
     font-family: "Arial";
@@ -137,6 +138,6 @@ p {
     display: flex;
     justify-content: center;
 }
-#imagensPesquisa div{
+#imagem1 img {
     padding: 20px;
 }
