@@ -17,25 +17,17 @@ function principal() {
 
     let element = document.getElementById("imagem");
     if (element == null){
-        conteudo()
+        conteudo();
     }else{
-        LimpaTudo()
+        LimpaTudo();
     }
 }
 function conteudo(){
-    cria()
-    AdicionaTitulo()
-    AdicionaDescricao()
-    AdicionaImagem()
-    AdicionaData()
-}
-
-// MÉTODO HTTP
-function get(url) {
-    let request = new XMLHttpRequest();
-    request.open("GET", url, false);
-    request.send();
-    return request.responseText;
+    cria();
+    AdicionaTitulo();
+    AdicionaConteudo();
+    AdicionaImagem();
+    AdicionaData();
 }
 // ============== FUNÇÕES AUTOEXPLICATIVAS ============= //
 function cria(){
@@ -48,27 +40,6 @@ function cria(){
     document.getElementsByClassName("resultado")[0].appendChild(conteudo);
 }
 // =================== FUNÇÕES FATORADAS ============= //
-function LimpaTudo(){
-    for (var index = 0; index < 3; index++) {
-        LimpaImagem();
-        LimpaConteudo();
-    }
-}
-function LimpaImagem(){
-    var imagem = document.getElementById("imagem");
-    imagem.parentNode.removeChild(imagem);
-}
-function LimpaConteudo(){
-    var conteudo = document.getElementById("conteudo");
-    conteudo.parentNode.removeChild(conteudo);
-}
-
-function AdicionaData(){
-    var data = document.createElement("p");
-    data.style.color = "white"
-    data.innerHTML = dadosJson.date;
-    document.getElementById("conteudo").appendChild(data);
-}
 function AdicionaImagem(){
     var imagem = document.createElement("img");
     imagem.style.width = "40vw"
@@ -76,16 +47,45 @@ function AdicionaImagem(){
     imagem.src = dadosJson.hdurl;
     document.getElementById("imagem").appendChild(imagem);
 }
+function LimpaImagem(){
+    var imagem = document.getElementById("imagem");
+    imagem.parentNode.removeChild(imagem);
+}
+// ======================================= //
+function AdicionaConteudo(){
+    var descricao = document.createElement("p");
+    descricao.style.color = "white"
+    descricao.innerHTML = dadosJson.explanation;
+    document.getElementById("conteudo").appendChild(descricao);
+    descricao.classList.add("descricao");
+}
+function LimpaConteudo(){
+    var conteudo = document.getElementById("conteudo");
+    conteudo.parentNode.removeChild(conteudo);
+}
+// ===== A DATA É ADICIONADA AO CONTEÚDO == //
+function AdicionaData(){
+    var data = document.createElement("p");
+    data.style.color = "white";
+    data.innerHTML = dadosJson.date;
+    document.getElementById("conteudo").appendChild(data);
+}
+// ======================================== //
 function AdicionaTitulo(){
     var titulo = document.createElement("h2");
     titulo.style.color = "white"
     titulo.innerHTML = dadosJson.title;
     document.getElementById("conteudo").appendChild(titulo);
 }
-function AdicionaDescricao(){
-    var descricao = document.createElement("p");
-    descricao.style.color = "white"
-    descricao.innerHTML = dadosJson.explanation;
-    document.getElementById("conteudo").appendChild(descricao);
-    descricao.classList.add("descricao");
+function get(url) {
+    let request = new XMLHttpRequest();
+    request.open("GET", url, false);
+    request.send();
+    return request.responseText;
+}
+function LimpaTudo(){
+    for (var index = 0; index < 3; index++) {
+        LimpaImagem();
+        LimpaConteudo();
+    }
 }
