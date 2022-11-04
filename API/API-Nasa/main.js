@@ -44,6 +44,7 @@ function AdicionaImagem(){
     var imagem = document.createElement("img");
     imagem.style.width = "40vw"
     imagem.style.paddingRight = "5vw"
+    imagem.style.paddingLeft = "5vw"
     imagem.src = dadosJson.hdurl;
     document.getElementById("imagem").appendChild(imagem);
 }
