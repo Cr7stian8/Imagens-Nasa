@@ -2,10 +2,12 @@ function main(){
     var url = "https://api.github.com/search/repositories?q=";
     var nomeBuscado = document.getElementById("input").value;
     let urlApi = url + nomeBuscado;
-
     let dados = get(urlApi);
-    let resultado = document.getElementById("resultado");
+
     console.log(dados);
+    let para = document.createElement("p")
+    para.textContent
+    ducument.getElementById("resultado").appendchild
 }
 // get
 function get(urlGet){

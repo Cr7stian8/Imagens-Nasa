@@ -137,7 +137,9 @@ p {
 #imagensPesquisa{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #imagem1 img {
     padding: 20px;
+    align-items: center;
 }
