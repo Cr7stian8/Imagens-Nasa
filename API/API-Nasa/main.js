@@ -90,3 +90,13 @@ function LimpaTudo(){
         LimpaConteudo();
     }
 }
+// enviar com enter
+document.addEventListener("keypress", function(e) {
+    if(e.key === 'Enter') {
+
+        var btn = document.querySelector("#submit");
+
+      btn.click();
+
+    }
+});
