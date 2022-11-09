@@ -2,10 +2,16 @@ function adicionaImagem(url){
     let dados = get(url)
     dadosJson = JSON.parse(dados)
     var img = document.createElement("img")
+    let imgLink = dadosJson.hdurl
     img.src = dadosJson.hdurl
     img.style.width = "200px"
     img.style.height = "200px"
-    document.getElementById("imagem1").appendChild(img)
+    var link = document.createElement("a")
+    link.appendChild(img)
+    link.href = imgLink
+    link.target = "blank"
+    console.log(imgLink)
+    document.getElementById("imagensPesquisa").appendChild(link)
 }
 function sorteiaFotos(){
     let ano = Math.floor(Math.random() * 22) + 2000;
@@ -17,6 +23,7 @@ function sorteiaFotos(){
     var urlImagem = url + data;
     adicionaImagem(urlImagem);
 }
+
 function get(url) {
     let request = new XMLHttpRequest();
     request.open("GET", url, false);
