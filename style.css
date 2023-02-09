@@ -1,20 +1,50 @@
+body {
+    height: 95vh;
+    background-image: url(API/API-Nasa/images/fundoXiado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: crosshair;
+}
 ul{
-    padding-top: 250px;
     text-decoration: none;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 li{
-    margin: 20px;
     text-decoration: inherit !important;
     color: black;
     list-style-type: none;
+    margin: 20px;
 }
 a{
     text-decoration: none !important;
+    font-family: 'Lucida Sans';
+    font-weight: 500;
+    text-transform: uppercase;
     font-size: 18px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 a:hover{
-    color: black;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    cursor: crosshair;
+}
+#rick{
+    position: absolute;
+    top: 9vh;
+    left: 4vw;
+}
+#rick:hover{
+    width: 160px;
+}
+#bender{
+    position: absolute;
+    bottom: 9vh;
+    right: 4vw;
+}
+#bender:hover{
+    width: 200px;
 }
