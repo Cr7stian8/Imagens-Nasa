@@ -1,102 +1,77 @@
-function principal() {
-    //Api que está sendo consumida
-    var url = "https://api.nasa.gov/planetary/apod?api_key=XNDfJe9BMgcT1s0MXNp3RC4kworzZekn9ORy9hYu";
+const apiKey = 'XNDfJe9BMgcT1s0MXNp3RC4kworzZekn9ORy9hYu';
+const apiUrl = 'https://api.nasa.gov/planetary/apod';
 
-    //Recebendo valor dos input
-    var dia = document.getElementById("dia").value;
-    var mes = document.getElementById("mes").value;
-    var ano = document.getElementById("ano").value;
+const getImageData = async (date) => {
+  const url = `${apiUrl}?api_key=${apiKey}&date=${date}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};
 
-    //Adicionando data a url para realizar o get na data especificada pelo usuario
-    var data ="&date="+ano+"-"+mes+"-"+dia;
-    let urlAPI = url + data;
+const addImageToPage = (data) => {
+  const imageElement = document.createElement('img');
+  imageElement.src = data.hdurl;
+  imageElement.style.width = '40vw';
+  imageElement.style.paddingRight = '5vw';
+  imageElement.style.paddingLeft = '5vw';
 
-    //Passando dados para JSON para facilitar a manipulação
-    dados = get(urlAPI);
-    dadosJson = JSON.parse(dados);
+  const imageContainer = document.querySelector('#imagem');
+  imageContainer.innerHTML = '';
+  imageContainer.appendChild(imageElement);
+};
 
-    let element = document.getElementById("imagem");
-    if (element == null){
-        conteudo();
-    }else{
-        LimpaTudo();
+const addContentToPage = (data) => {
+  const titleElement = document.createElement('h2');
+  titleElement.innerHTML = data.title;
+  titleElement.style.color = 'white';
+
+  const dateElement = document.createElement('p');
+  dateElement.innerHTML = data.date;
+  dateElement.style.color = 'white';
+
+  const descriptionElement = document.createElement('p');
+  descriptionElement.innerHTML = data.explanation;
+  descriptionElement.style.color = 'white';
+
+  const contentContainer = document.querySelector('#conteudo');
+  contentContainer.innerHTML = '';
+  contentContainer.appendChild(titleElement);
+  contentContainer.appendChild(dateElement);
+  contentContainer.appendChild(descriptionElement);
+};
+
+const clearPage = () => {
+  const imageContainer = document.querySelector('#imagem');
+  imageContainer.innerHTML = '';
+
+  const contentContainer = document.querySelector('#conteudo');
+  contentContainer.innerHTML = '';
+};
+
+const onSearchButtonClick = async () => {
+    // Clear the existing content
+    clearPage();
+
+    const day = document.querySelector('#dia').value;
+    const month = document.querySelector('#mes').value;
+    const year = document.querySelector('#ano').value;
+    const date = `${year}-${month}-${day}`;
+
+    const data = await getImageData(date);
+    addImageToPage(data);
+    addContentToPage(data);
+  };
+
+
+const initialize = () => {
+  document.querySelector('#buscar').addEventListener('click', onSearchButtonClick);
+};
+
+const LimpaImagem = () => {
+    const imageElement = document.querySelector('#imagem img');
+    if (imageElement && imageElement.parentNode) {
+      imageElement.parentNode.removeChild(imageElement);
     }
-}
-function conteudo(){
-    cria();
-    AdicionaTitulo();
-    AdicionaConteudo();
-    AdicionaImagem();
-    AdicionaData();
-}
-// ============== FUNÇÕES AUTOEXPLICATIVAS ============= //
-function cria(){
-    var imagem = document.createElement("article");
-    imagem.setAttribute("id","imagem")
-    document.getElementsByClassName("resultado")[0].appendChild(imagem);
+  };
 
-    var conteudo = document.createElement("article");
-    conteudo.setAttribute("id","conteudo")
-    document.getElementsByClassName("resultado")[0].appendChild(conteudo);
-}
-// =================== FUNÇÕES FATORADAS ============= //
-function AdicionaImagem(){
-    var imagem = document.createElement("img");
-    imagem.style.width = "40vw"
-    imagem.style.paddingRight = "5vw"
-    imagem.style.paddingLeft = "5vw"
-    imagem.src = dadosJson.hdurl;
-    document.getElementById("imagem").appendChild(imagem);
-}
-function LimpaImagem(){
-    var imagem = document.getElementById("imagem");
-    imagem.parentNode.removeChild(imagem);
-}
-// ======================================= //
-function AdicionaConteudo(){
-    var descricao = document.createElement("p");
-    descricao.style.color = "white"
-    descricao.innerHTML = dadosJson.explanation;
-    document.getElementById("conteudo").appendChild(descricao);
-    descricao.classList.add("descricao");
-}
-function LimpaConteudo(){
-    var conteudo = document.getElementById("conteudo");
-    conteudo.parentNode.removeChild(conteudo);
-}
-// ===== A DATA É ADICIONADA AO CONTEÚDO == //
-function AdicionaData(){
-    var data = document.createElement("p");
-    data.style.color = "white";
-    data.innerHTML = dadosJson.date;
-    document.getElementById("conteudo").appendChild(data);
-}
-// ======================================== //
-function AdicionaTitulo(){
-    var titulo = document.createElement("h2");
-    titulo.style.color = "white"
-    titulo.innerHTML = dadosJson.title;
-    document.getElementById("conteudo").appendChild(titulo);
-}
-function get(url) {
-    let request = new XMLHttpRequest();
-    request.open("GET", url, false);
-    request.send();
-    return request.responseText;
-}
-function LimpaTudo(){
-    for (var index = 0; index < 3; index++) {
-        LimpaImagem();
-        LimpaConteudo();
-    }
-}
-// enviar com enter
-document.addEventListener("keypress", function(e) {
-    if(e.key === 'Enter') {
-
-        var btn = document.querySelector("#submit");
-
-      btn.click();
-
-    }
-});
+initialize();
