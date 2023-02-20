@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!--
+=============================================================
+Consumindo Api da Nasa
+=============================================================
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -9,46 +14,36 @@
 </head>
 
 <body>
-    <!-- Cabeçalho -->
+    <!-- primeira sessão -->
     <div id="imagemFundo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
             width="180px">
         <img class="pl50" src="images/textoHeader.png" width="600px">
     </div>
-
-    <!-- Primeira seção -->
     <section>
+        <!-- segunda sessão -->
         <div id="pesquise">
             <p>Pesquise sua data: </p>
         </div>
-
         <div class="flex">
             <input id="dia" type="text" placeholder="Dia">
-            <input id="mes" type="text" placeholder="Mês">
+            <input id="mes" type="text" placeholder="Mes">
             <input id="ano" type="text" placeholder="Ano">
 
             <img class="pr10 hoverIcone" src="images/lupa.png" onclick="principal()" width="45px">
             <img class="hoverIcone" onclick="LimpaTudo()" src="images/lixo.png" width="45px">
         </div>
-
         <section class="flex resultado"></section>
-
-        <!-- Última seção -->
+        <!-- ultima sessão -->
         <div id="ultimas-pesquisas">
             <p>Algumas pesquisas</p>
         </div>
-
         <section id="imagensPesquisa">
         </section>
+        <!-- footer -->
     </section>
-
-    <!-- Scripts -->
     <script src="main.js"></script>
     <script src="slide.js"></script>
 </body>
-<div id="modal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modal-img">
-  </div>
 
 </html>
