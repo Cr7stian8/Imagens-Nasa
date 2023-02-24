@@ -42,9 +42,6 @@ function cria(){
 // =================== FUNÇÕES FATORADAS ============= //
 function AdicionaImagem(){
   var imagem = document.createElement("img");
-  imagem.style.width = "40vw"
-  imagem.style.paddingRight = "5vw"
-  imagem.style.paddingLeft = "5vw"
   imagem.src = dadosJson.hdurl;
   document.getElementById("imagem").appendChild(imagem);
 }
@@ -55,7 +52,6 @@ function LimpaImagem(){
 // ======================================= //
 function AdicionaConteudo(){
   var descricao = document.createElement("p");
-  descricao.style.color = "white"
   descricao.innerHTML = dadosJson.explanation;
   document.getElementById("conteudo").appendChild(descricao);
   descricao.classList.add("descricao");
@@ -67,14 +63,12 @@ function LimpaConteudo(){
 // ===== A DATA É ADICIONADA AO CONTEÚDO == //
 function AdicionaData(){
   var data = document.createElement("p");
-  data.style.color = "white";
   data.innerHTML = dadosJson.date;
   document.getElementById("conteudo").appendChild(data);
 }
 // ======================================== //
 function AdicionaTitulo(){
   var titulo = document.createElement("h2");
-  titulo.style.color = "white"
   titulo.innerHTML = dadosJson.title;
   document.getElementById("conteudo").appendChild(titulo);
 }
@@ -89,14 +83,4 @@ function LimpaTudo(){
       LimpaImagem();
       LimpaConteudo();
   }
-}
-// enviar com enter
-document.addEventListener("keypress", function(e) {
-  if(e.key === 'Enter') {
-
-      var btn = document.querySelector("#submit");
-
-    btn.click();
-
-  }
-});
+};

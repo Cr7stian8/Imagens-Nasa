@@ -188,3 +188,22 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+/* Estilos para a imagem */
+#imagem img {
+    width: 40vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+
+  /* Estilos para o conteúdo */
+  #conteudo {
+    color: white;
+  }
+
+  .descricao {
+    color: white;
+  }
+
+  h2 {
+    color: white;
+  }
