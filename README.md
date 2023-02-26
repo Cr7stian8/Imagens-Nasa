@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=40&color=00255&center=true&vCenter=true&width=1000&lines=💻+JAVASCRIPT+💻;EXERCÍCIOS+PARA+PRATICAR)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?size=40&color=00255&center=true&vCenter=true&width=1000&lines=💻+JAVASCRIPT+💻;API+APOD+NASA)](https://git.io/typing-svg)
 
 <br>
 
@@ -17,4 +17,3 @@ Visual Studio Code é uma IDE usada para programar na maioria das liinguagens, s
 --> Arquivos .js carregam toda a lógica do site<br>
 --> Arquivos .css são responsáveis pela estilização da página<br>
 --> Arquivos .html são responsável por marcar o site<br>
-
