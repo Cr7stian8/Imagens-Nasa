@@ -1,16 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
   function adicionaImagem(url) {
-    let dados = get(url)
-    dadosJson = JSON.parse(dados)
-    var img = document.createElement("img")
-    let imgLink = dadosJson.hdurl
-    img.src = dadosJson.hdurl
-    img.style.width = "200px"
-    img.style.height = "200px"
-    var link = document.createElement("a")
-    link.appendChild(img)
-    link.href = imgLink
-    link.target = "blank"
+    let dados = get(url);
+    dadosJson = JSON.parse(dados);
+    var img = document.createElement("img");
+    let imgLink = dadosJson.hdurl;
+    img.src = dadosJson.hdurl;
+
+    // define o width e a altura de acordo com o tamanho da tela
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      img.style.width = "46vw";
+      img.style.height = "auto";
+      img.style.padding = "2px";
+    } else {
+      img.style.width = "200px";
+      img.style.height = "200px";
+    }
+
+    var link = document.createElement("a");
+    link.appendChild(img);
+    link.href = imgLink;
+    link.target = "blank";
 
     // Adiciona um evento de clique para mostrar a imagem em um modal
     link.addEventListener("click", function (event) {
@@ -21,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       modalImg.src = this.href;
     });
 
-    document.getElementById("imagensPesquisa").appendChild(link)
+    document.getElementById("imagensPesquisa").appendChild(link);
   }
 
   function sorteiaFotos() {

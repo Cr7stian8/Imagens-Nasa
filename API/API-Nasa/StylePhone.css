@@ -3,7 +3,9 @@
         background-image: url(images/fundoXiado.png);
         max-width: 100vw !important;
     }
-
+    #pesquise, #ultimas-pesquisas{
+        margin-left: 7px;
+    }
     #imagensPesquisa {
         display: flex;
         margin: auto auto;
@@ -15,9 +17,12 @@
     }
 
     input {
-        width: 14vh;
-        padding: 6px;
+        width: 9vh;
+        padding: 2vw;
         margin: auto auto;
+    }
+    .pr10.hoverIcone{
+        margin-right: 5px;
     }
 
     #imagem img {
@@ -54,6 +59,7 @@
         color: aliceblue;
         text-transform: uppercase;
         font-size: 18px;
+        margin-block-end: 5px;
     }
 
     h2 {
