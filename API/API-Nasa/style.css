@@ -141,6 +141,7 @@
 
     /* O Modal (fundo) */
     .modal {
+        padding-top: 15vh;
         display: none;
         /* Oculto por padrão */
         position: fixed;
