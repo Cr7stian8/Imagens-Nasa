@@ -1,0 +1,34 @@
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(API/API-Nasa/images/fundoXiado.png);
+        max-height: 100vh;
+    }
+    #PaiA {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+    }
+    a {
+        text-decoration: none !important;
+        color: aliceblue;
+        font-size: 24px;
+        padding: 5px;
+        border: 2px solid #fdfdfd;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+    li {
+        list-style-type: none;
+    }
+    #rick {
+        position: absolute;
+        top: 1vh;
+        left: 4vw;
+    }
+    #bender {
+        position: absolute;
+        bottom: 9vh;
+        right: 4vw;
+    }
+}

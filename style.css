@@ -1,55 +1,65 @@
-body {
+@media screen and (min-width: 768px) {
+  body {
     height: 95vh;
     background-image: url(API/API-Nasa/images/fundoXiado.png);
     background-repeat: no-repeat;
     background-size: cover;
     cursor: crosshair;
-}
-ul{
+  }
+
+  ul {
     text-decoration: none;
     display: flex;
     justify-content: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
-li{
+  }
+
+  li {
     text-decoration: inherit !important;
     color: black;
     list-style-type: none;
     margin: 20px;
-}
-a{
+  }
+
+  a {
     text-decoration: none !important;
     font-family: 'Lucida Sans';
     font-weight: 500;
     text-transform: uppercase;
     font-size: 20px;
     color: rgb(255, 255, 255);
-}
-a:hover{
+  }
+
+  a:hover {
     color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
     cursor: crosshair;
-}
-#rick{
+  }
+
+  #rick {
     position: absolute;
     top: 9vh;
     left: 4vw;
-}
-#rick:hover{
+  }
+
+  #rick:hover {
     width: 160px;
-}
-#bender{
+  }
+
+  #bender {
     position: absolute;
     bottom: 9vh;
     right: 4vw;
-}
-#bender:hover{
+  }
+
+  #bender:hover {
     width: 200px;
-}
-/*  animação */
-a {
+  }
+
+  /*  animação */
+  a {
     position: relative;
     display: inline-block;
   }
@@ -74,12 +84,15 @@ a {
     0% {
       transform: rotate(0deg) translateX(0);
     }
+
     50% {
       transform: translateX(150px);
       border: 2px solid #ffffff;
     }
+
     100% {
       transform: rotate(360deg) translateX(0);
       border: 2px solid #ff0404;
     }
   }
+}
