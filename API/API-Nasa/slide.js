@@ -25,20 +25,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function sorteiaFotos() {
+    let quantidade = 3;
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      quantidade = 6;
+    }
+
     const dataAtual = new Date();
     const dataMinima = new Date('1996-01-01');
     const tempoMinimo = dataMinima.getTime();
-    const tempoAleatorio = Math.floor(Math.random() * (dataAtual.getTime() - tempoMinimo + 1)) + tempoMinimo;
-    const dataAleatoria = new Date(tempoAleatorio);
-    const ano = dataAleatoria.getFullYear();
-    const mes = dataAleatoria.getMonth() + 1;
-    const dia = dataAleatoria.getDate();
-    const url = "https://api.nasa.gov/planetary/apod?api_key=XNDfJe9BMgcT1s0MXNp3RC4kworzZekn9ORy9hYu";
-    const data = "&date=" + ano + "-" + mes.toString().padStart(2, '0') + "-" + dia.toString().padStart(2, '0');
-    const urlImagem = url + data;
-    adicionaImagem(urlImagem);
-  }
 
+    for (let i = 0; i < quantidade; i++) {
+      const tempoAleatorio = Math.floor(Math.random() * (dataAtual.getTime() - tempoMinimo + 1)) + tempoMinimo;
+      const dataAleatoria = new Date(tempoAleatorio);
+      const ano = dataAleatoria.getFullYear();
+      const mes = dataAleatoria.getMonth() + 1;
+      const dia = dataAleatoria.getDate();
+      const url = "https://api.nasa.gov/planetary/apod?api_key=XNDfJe9BMgcT1s0MXNp3RC4kworzZekn9ORy9hYu";
+      const data = "&date=" + ano + "-" + mes.toString().padStart(2, '0') + "-" + dia.toString().padStart(2, '0');
+      const urlImagem = url + data;
+      adicionaImagem(urlImagem);
+    }
+  }
 
   function get(url) {
     let request = new XMLHttpRequest();
@@ -47,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     return request.responseText;
   }
 
-  sorteiaFotos();
-  sorteiaFotos();
   sorteiaFotos();
 
   let imagensPesquisa = document.getElementById("imagensPesquisa");
