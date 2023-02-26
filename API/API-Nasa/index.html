@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api da Nasa</title>
+    <title>NasaApi</title>
+    <!-- links -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="StylePhone.css">
 </head>
 
 <body>
     <!-- Cabeçalho -->
     <div id="imagemFundo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
+        <img title="data" class="nav1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
             width="180px">
-        <img class="pl50" src="images/textoHeader.png" width="600px">
+        <img class="nav2 pl50" src="images/textoHeader.png" width="600px">
     </div>
 
     <!-- Primeira seção -->
@@ -22,7 +24,7 @@
             <p>Pesquise sua data: </p>
         </div>
 
-        <div class="flex">
+        <div class="flex flexC">
             <input id="dia" type="text" placeholder="Dia">
             <input id="mes" type="text" placeholder="Mês">
             <input id="ano" type="text" placeholder="Ano">
