@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function adicionaImagem(url) {
+  async function adicionaImagem(url) {
     let dados = get(url);
     dadosJson = JSON.parse(dados);
+
+    // Verifica se o resultado é indefinido
+    if (!dadosJson || !dadosJson.hdurl) {
+      console.log("Encontramos um resultado Undefined - vamos removê-lo para você...");
+      setTimeout(() => {
+        adicionaImagem(url);
+      }, 1000);
+      return;
+    }
+
     var img = document.createElement("img");
     let imgLink = dadosJson.hdurl;
     img.src = dadosJson.hdurl;

@@ -3,9 +3,12 @@
         background-image: url(images/fundoXiado.png);
         max-width: 100vw !important;
     }
-    #pesquise, #ultimas-pesquisas{
+
+    #pesquise,
+    #ultimas-pesquisas {
         margin-left: 7px;
     }
+
     #imagensPesquisa {
         display: flex;
         margin: auto auto;
@@ -21,7 +24,8 @@
         padding: 2vw;
         margin: auto auto;
     }
-    .pr10.hoverIcone{
+
+    .pr10.hoverIcone {
         margin-right: 5px;
     }
 
@@ -46,7 +50,6 @@
         display: flex;
     }
 
-    /* Estilos para o conteúdo */
     #conteudo {
         color: white;
     }
@@ -66,7 +69,6 @@
         color: white;
     }
 
-    /* Conteúdo/Box do Modal */
     .modal-content {
         margin: auto;
         display: flex;
@@ -75,28 +77,19 @@
         max-width: 90vw;
         max-height: 80vh;
     }
-    /* O Botão de Fechar */
-    /* O Modal (fundo) */
+
     .modal {
         padding-top: 20vh;
         display: none;
-        /* Oculto por padrão */
         position: fixed;
-        /* Permanece no lugar */
         z-index: 1;
-        /* Fica acima de tudo */
         left: 0;
         top: 0;
         width: 100%;
-        /* Largura total */
         height: 100%;
-        /* Altura total */
         overflow: auto;
-        /* Habilita a rolagem se necessário */
         background-color: rgb(0, 0, 0);
-        /* Cor de fallback */
         background-color: rgba(0, 0, 0, 0.9);
-        /* Preto com opacidade */
     }
 
     .close {
