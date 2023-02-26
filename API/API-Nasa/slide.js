@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let quantidade = 3;
 
     if (window.matchMedia("(max-width: 768px)").matches) {
-      quantidade = 6;
+      quantidade = 10;
     }
 
     const dataAtual = new Date();
