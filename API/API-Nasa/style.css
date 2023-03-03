@@ -98,7 +98,8 @@
         text-transform: uppercase;
     }
 
-    #imagem {
+    #imagemPesquisa {
+        padding-top: 3vh;
         width: 40vw;
         padding-left: 5vw;
         padding-right: 3vw;
