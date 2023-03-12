@@ -13,10 +13,8 @@
 <body>
     <!-- Cabeçalho -->
     <div id="imagemFundo">
-        <img title="data" class="nav1"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
-            width="180px">
-        <img class="nav2 pl50" src="images/textoHeader.png" width="600px">
+        <img title="data" class="nav1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" width="180px">
+        <img class="nav2 pl50" src="images/textoHeader.svg" width="600px">
     </div>
 
     <!-- Primeira seção -->
@@ -25,25 +23,31 @@
             <p>Pesquise sua data</p>
         </div>
 
-        <div class="flex flexC">
+        <div class="flexC">
             <input id="dia" type="text" placeholder="Dia">
             <input id="mes" type="text" placeholder="Mês">
             <input id="ano" type="text" placeholder="Ano">
 
-            <img class="pr10 hoverIcone" src="images/lupa.png" onclick="principal()" width="45px">
-            <img class="hoverIcone" onclick="limpa()" src="images/lixo.png" width="45px">
+            <img class="pr10 hoverIcone" src="images/lupa.png" onclick="principal()" width="50px">
+            <img class="hoverIcone" onclick="limpa()" src="images/lixo.png" width="50px">
         </div>
 
         <section id="resultado" class="flex"></section>
 
         <!-- Última seção -->
+
         <div id="ultimas-pesquisas">
             <p>Algumas pesquisas</p>
         </div>
 
         <section id="imagensPesquisa">
         </section>
+
     </section>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/Cr7stian8 " target="_blanck">Cr7stian8</a></p>
+    </footer>
 
     <!-- Scripts -->
     <script src="main.js"></script>
