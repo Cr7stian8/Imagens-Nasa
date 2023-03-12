@@ -1,23 +1,26 @@
 @media screen and (min-width: 768px) {
-    footer{
+    footer {
         color: white;
         font-family: arial;
         text-transform: uppercase;
         margin-top: 5vh;
-        padding: 20px;
+        padding: 20px 0 10px 0;
         display: flex;
         justify-content: center;
         background-color: #242323;
         border-radius: 15px 15px 0 0;
     }
+
     img {
         vertical-align: middle;
         align-items: center;
     }
+
     a {
         text-decoration: none;
         color: inherit;
     }
+
     body {
         align-items: center;
         background-image: url(images/fundoXiado.png);
@@ -28,10 +31,12 @@
         cursor: crosshair;
         width: 80vw;
     }
+
     p {
         margin-block-end: 0px !important;
         margin-block-start: 0px !important;
     }
+
     #dia,
     #mes,
     #ano {
@@ -39,6 +44,7 @@
         padding: 13px;
         border-radius: 10px;
     }
+
     #imagemFundo {
         display: flex;
         justify-content: center;
@@ -46,33 +52,42 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     #imagemFundo img {
         vertical-align: middle;
     }
+
     #vh95 {
         min-height: 95vh;
     }
+
     .hoverIcone:hover {
         transition: 0.1s;
         border-radius: 10px;
         box-shadow: 2px 2px 4px 4px gray;
     }
+
     .pl50 {
         padding-left: 50px;
     }
+
     .flex {
         display: flex;
         justify-content: center;
     }
+
     .resultado {
         padding-top: 4vh;
     }
+
     .pb30 {
         padding-bottom: 30px;
     }
+
     .pr10 {
         margin-right: 10px;
     }
+
     #pesquise {
         padding-top: 40px;
         padding-bottom: 20px;
@@ -82,6 +97,7 @@
         font-weight: bold;
         text-transform: uppercase;
     }
+
     #ultimas-pesquisas {
         width: fit-content;
         padding: 20px 15px;
@@ -94,27 +110,33 @@
         background-color: #242323;
         color: rgb(255, 255, 255);
     }
-    #imagensPesquisa a{
+
+    #imagensPesquisa a {
         margin: 20px;
     }
-    #imagensPesquisa{
+
+    #imagensPesquisa {
         background-color: #242323;
         border-radius: 0px 15px 15px 15px;
     }
+
     /* imagem da pesquisa */
     #imagemPesquisa {
         padding-top: 3vh;
         width: 40vw;
     }
+
     #conteudo {
         width: 40vw;
         padding-left: 3vw;
         padding-right: 5vw;
     }
+
     #imagem1 img {
         padding: 20px;
         align-items: center;
     }
+
     .modal {
         padding-top: 15vh;
         display: none;
@@ -128,6 +150,7 @@
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9);
     }
+
     .modal-content {
         margin: auto;
         display: flex;
@@ -136,6 +159,7 @@
         max-width: 80vw;
         max-height: 70vh;
     }
+
     .close {
         position: absolute;
         top: 10px;
@@ -145,23 +169,28 @@
         color: #f1f1f1;
         cursor: pointer;
     }
+
     .close:hover,
     .close:focus {
         color: #f44336;
         text-decoration: none;
         cursor: pointer;
     }
+
     #imagem img {
         width: 40vw;
         padding-right: 5vw;
         padding-left: 5vw;
     }
+
     #conteudo {
         color: white;
     }
+
     .descricao {
         color: white;
     }
+
     h2 {
         color: white;
     }
