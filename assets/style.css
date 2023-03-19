@@ -1,7 +1,7 @@
 @media screen and (min-width: 768px) {
   body {
     height: 95vh;
-    background-image: url(API/API-Nasa/images/fundoXiado.png);
+    background-image: url(../API/assets/images/fundoXiado.png);
     background-repeat: no-repeat;
     background-size: cover;
     cursor: crosshair;

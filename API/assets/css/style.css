@@ -122,8 +122,9 @@
 
     /* imagem da pesquisa */
     #imagemPesquisa {
-        padding-top: 3vh;
+        margin-top: 3vh;
         width: 40vw;
+        border-radius: 15px 15px 15px 15px;
     }
 
     #conteudo {
